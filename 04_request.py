@@ -9,7 +9,7 @@ def request(url):
 def main():
 
     url = 'https://www.apple.com'
-    for _ in range(1, 100):
+    for _ in range(100):
         print(request(url))
 
 if __name__ == '__main__':
