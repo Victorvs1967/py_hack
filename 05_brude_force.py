@@ -1,17 +1,17 @@
 import requests
 
 
-password_index = 0
 symbols = '0123456789qwertyuiopasdfghjklzxcvbnm'
+password_index = 0
 
 def get_next_password():
 
     global symbols
     global password_index
 
+    index = password_index
     password = ''
 
-    index = password_index
     while index > 0:
         rest = index % len(symbols)
         index = index // len(symbols)
