@@ -3,10 +3,11 @@ import requests
 
 index = 0
 
+
 def get_next_password(passwords):
 
     global index
-    password =  passwords[index]
+    password = passwords[index]
     index += 1
     return password
 
