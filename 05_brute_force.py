@@ -23,12 +23,13 @@ def get_next_password(symbols):
 def main():
 
     symbols = '0123456789qwertyuiopasdfghjklzxcvbnm'
+    url = 'http://127.0.0.1:5000/auth'
     status_code = 0
 
     while status_code != 200:
         password = get_next_password(symbols)
         print(password)
-        r = requests.post('http://127.0.0.1:5000/auth', data={'login': 'admin', 'passwodd': password})
+        r = requests.post(url, data={'login': 'admin', 'password': password})
         status_code = r.status_code
 
 
