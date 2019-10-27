@@ -1,6 +1,6 @@
 """
 format:
 
-def get get_next_password():
-    return str(...)
+def request(url, login, password):
+    return bool(...)
 """

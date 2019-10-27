@@ -1,11 +1,26 @@
-state = {
-#     state_key: []
+states = {
+    # state_key: 0
 }
+
+
+with open('users.txt') as users_file:
+    s = users_file.read()
+    logins = s.split('\n')
 
 
 def get_next_str(state_key):
 
-    if state_key not in state:
-        states
+    if state_key not in states:
+        states[state_key] = 0
+    if states[state_key] >= len(logins):
+        return None
 
-    password = state[state_key]
+    login = logins[states[state_key]]
+    states[state_key] += 1
+
+    return ''.join(login)
+
+
+if __name__ == '__main__':
+    for step in range(1000000):
+        print(get_next_str('1'))
