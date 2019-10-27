@@ -13,6 +13,8 @@ password_state = 'password'
 
 
 def hack(end_time):
+    # TODO: time check
+
     global password_state
     step = 0
     password = ''
