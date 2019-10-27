@@ -3,7 +3,7 @@ states = {
 }
 
 
-with open('passwords.txt') as users_file:
+with open('generator/passwords.txt') as users_file:
     s = users_file.read()
     password = s.split('\n')
 

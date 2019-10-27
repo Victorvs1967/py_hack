@@ -3,7 +3,7 @@ states = {
 }
 
 
-with open('users.txt') as users_file:
+with open('generator/users.txt') as users_file:
     s = users_file.read()
     logins = s.split('\n')
 
