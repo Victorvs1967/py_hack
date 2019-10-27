@@ -13,7 +13,6 @@ password_state = 'password'
 
 
 def hack(end_time):
-
     global password_state
     step = 0
     password = ''
@@ -40,7 +39,6 @@ def hack(end_time):
 
 
 def hack_threaded(threads, seconds):
-
     end = time.time() + seconds
     run_threads = []
 
